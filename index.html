@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Planet | Escola de Línguas</title>
+
+
+<style>
+
+/* =========================================
+   CORES DA PLANET
+========================================= */
+
+:root {
+
+    --preto: #050505;
+
+    --preto-2: #0b0b0b;
+
+    --azul-escuro: #071A3D;
+
+    --azul: #0B2D66;
+
+    --azul-claro: #1683D8;
+
+    --branco: #FFFFFF;
+
+    --cinza: #b9c2d0;
+
+}
+
+
+/* =========================================
+   GERAL
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    background: var(--preto);
+
+    color: var(--branco);
+
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    width: 100%;
+
+    background: #050505;
+
+    border-bottom: 1px solid #142c52;
+
+    padding: 8px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo-header {
+
+    display: block;
+
+    width: 150px;
+
+    height: 70px;
+
+    object-fit: contain;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin-left: 25px;
+
+    transition: 0.2s;
+
+}
+
+
+nav a:hover {
+
+    color: var(--azul-claro);
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 680px;
+
+    padding: 70px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #0d326d 0%,
+            #071A3D 45%,
+            #050505 100%
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 950px;
+
+}
+
+
+.hero-logo {
+
+    width: 300px;
+
+    height: 230px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--azul-claro);
+
+}
+
+
+.hero p {
+
+    max-width: 720px;
+
+    margin: 0 auto 35px;
+
+    color: #dbe6f7;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.cta {
+
+    display: inline-block;
+
+    background: #25D366;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 17px 32px;
+
+    border-radius: 35px;
+
+    transition: 0.25s;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+
+}
+
+
+.cta:hover {
+
+    background: #1ebe5d;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.section {
+
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: var(--preto);
+
+}
+
+
+.section h2 {
+
+    font-size: 40px;
+
+    color: white;
+
+    margin-bottom: 18px;
+
+}
+
+
+.section h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    background: var(--azul-claro);
+
+    margin: 15px auto 0;
+
+    border-radius: 5px;
+
+}
+
+
+.section > p {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    color: var(--cinza);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   IDIOMAS
+========================================= */
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 45px;
+
+}
+
+
+.card {
+
+    width: 290px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #0c0c0c,
+            #071A3D
+        );
+
+    border: 1px solid #163d73;
+
+    padding: 38px 28px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+    transition: 0.25s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--azul-claro);
+
+}
+
+
+.flag {
+
+    font-size: 72px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.card h3 {
+
+    font-size: 28px;
+
+    color: white;
+
+    margin-bottom: 12px;
+
+}
+
+
+.card p {
+
+    color: #b9c2d0;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   ONLINE
+========================================= */
+
+.online {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #071A3D,
+            #050505
+        );
+
+}
+
+
+.online-box {
+
+    max-width: 850px;
+
+    margin: 40px auto 0;
+
+    background: #090909;
+
+    border: 1px solid #173d72;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+}
+
+
+.online-box p {
+
+    color: #dce5f3;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+.online-box strong {
+
+    color: var(--azul-claro);
+
+}
+
+
+/* =========================================
+   PREÇOS
+========================================= */
+
+.price {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #0B2D66,
+            #071A3D,
+            #050505
+        );
+
+}
+
+
+.price h2 {
+
+    color: white;
+
+}
+
+
+.price p {
+
+    color: #dbe6f7;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.contact {
+
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 1px solid #102b50;
+
+}
+
+
+.contact h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.contact p {
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #b9c2d0;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+
+    background: #000000;
+
+    border-top: 1px solid #102b50;
+
+    color: #7f8da3;
+
+    text-align: center;
+
+    padding: 28px;
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        padding: 8px 5%;
+
+    }
+
+
+    .logo-header {
+
+        width: 120px;
+
+        height: 55px;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding: 55px 6%;
+
+    }
+
+
+    .hero-logo {
+
+        width: 240px;
+
+        height: 190px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 18px;
+
+    }
+
+
+    .section {
+
+        padding: 65px 6%;
+
+    }
+
+
+    .section h2 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     MENU
+========================================= -->
+
+<header>
+
+    <a href="#inicio">
+
+        <!--
+            SUA LOGO
+
+            O arquivo deve estar na mesma pasta
+            deste index.html.
+
+            Nome do arquivo:
+
+            minha-logo.png
+        -->
+
+        <img
+            src="./minha-logo.png"
+            alt="Planet Escola de Línguas"
+            class="logo-header"
+        >
+
+    </a>
+
+
+    <nav>
+
+        <a href="#inicio">
+            Início
+        </a>
+
+        <a href="#idiomas">
+            Idiomas
+        </a>
+
+        <a href="#online">
+            Como funciona
+        </a>
+
+        <a href="#contato">
+            Fale Conosco
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section
+    class="hero"
+    id="inicio"
+>
+
+    <div class="hero-content">
+
+
+        <img
+            src="./minha-logo.png"
+            alt="Logo Planet Escola de Línguas"
+            class="hero-logo"
+        >
+
+
+        <h1>
+
+            Venha se conectar com a
+
+            <span>
+                Planet
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Aprenda um novo idioma,
+            descubra novas culturas
+            e conecte-se com o mundo.
+
+            Na Planet, suas aulas são
+            100% online.
+
+        </p>
+
+
+        <a
+            class="cta"
+            href="https://wa.me/5519986056516?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20os%20cursos%20da%20Planet%20e%20os%20pre%C3%A7os."
+            target="_blank"
+        >
+
+            💬 Quero saber os preços
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     IDIOMAS
+========================================= -->
+
+<section
+    class="section"
+    id="idiomas"
+>
+
+    <h2>
+        Escolha seu idioma
+    </h2>
+
+
+    <p>
+
+        Comece sua jornada aprendendo
+        um novo idioma com a Planet.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="flag">
+                🇺🇸
+            </div>
+
+            <h3>
+                Inglês
+            </h3>
+
+            <p>
+
+                Aprenda inglês para ampliar
+                suas oportunidades e se
+                comunicar com pessoas
+                do mundo todo.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="flag">
+                🇪🇸
+            </div>
+
+            <h3>
+                Espanhol
+            </h3>
+
+            <p>
+
+                Aprenda espanhol e
+                conecte-se com milhões
+                de pessoas em diversos
+                países.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ONLINE
+========================================= -->
+
+<section
+    class="section online"
+    id="online"
+>
+
+    <h2>
+        🌎 Tudo online
+    </h2>
+
+
+    <p>
+
+        Aprenda de onde estiver,
+        sem precisar sair de casa.
+
+    </p>
+
+
+    <div class="online-box">
+
+        <p>
+
+            As aulas da
+
+            <strong>
+                Planet Escola de Línguas
+            </strong>
+
+            são realizadas
+
+            <strong>
+                100% online
+            </strong>
+
+            , permitindo que você
+            estude de onde estiver.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PREÇOS
+========================================= -->
+
+<section
+    class="section price"
+>
+
+    <h2>
+        Quer saber quanto custa?
+    </h2>
+
+
+    <p>
+
+        Fale com a Planet pelo WhatsApp
+        e descubra os valores e as opções
+        de cursos disponíveis.
+
+    </p>
+
+
+    <a
+        class="cta"
+        href="https://wa.me/5519986056516?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20os%20pre%C3%A7os%20dos%20cursos%20de%20Ingl%C3%AAs%20e%20Espanhol%20da%20Planet."
+        target="_blank"
+    >
+
+        💬 Consultar preços
+
+    </a>
+
+</section>
+
+
+<!-- =========================================
+     CONTATO
+========================================= -->
+
+<section
+    class="contact"
+    id="contato"
+>
+
+    <h2>
+        Fale Conosco
+    </h2>
+
+
+    <p>
+
+        Quer começar a aprender?
+
+        Chame a Planet no WhatsApp
+        e descubra qual curso combina
+        com você.
+
+    </p>
+
+
+    <a
+        class="cta"
+        href="https://wa.me/5519986056516?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Planet%20e%20quero%20saber%20mais."
+        target="_blank"
+    >
+
+        💬 Falar com a Planet
+
+    </a>
+
+</section>
+
+
+<!-- =========================================
+     RODAPÉ
+========================================= -->
+
+<footer>
+
+    © 2026 Planet Escola de Línguas
+
+    · Inglês e Espanhol
+
+    · 100% Online
+
+</footer>
+
+
+</body>
+
+</html>
+```
